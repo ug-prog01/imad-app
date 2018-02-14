@@ -5,14 +5,26 @@ var path = require('path');
 var app = express();
 app.use(morgan('combined'));
 
-
-var number1 = {
+var articles = {
+ number1:  {
     title: 'Number 1 Guys!',
     heading: 'Some Random Shit',
     date: 'Again some Random shit',
     content: `Again Some more Random DataAgain Some more Random DataAgain Some more Random DataAgain Some more Random DataAgain Some more Random DataAgain Some more Random DataAgain Some more Random DataAgain Some more Random DataAgain Some more Random DataAgain Some more Random DataAgain Some more Random DataAgain Some more Random DataAgain Some more Random Data`
+},
+ number2: {
+    title: 'Number 2 Guys!',
+    heading: 'Some Random Shit',
+    date: 'Again some Random shit',
+    content: `Again Some more Random DataAgain Some more Random DataAgain Some more Random DataAgain Some more Random DataAgain Some more Random DataAgain Some more Random DataAgain Some more Random DataAgain Some more Random DataAgain Some more Random DataAgain Some more Random DataAgain Some more Random DataAgain Some more Random DataAgain Some more Random Data`
+ },
+ number3: {
+    title: 'Number 3 Guys!',
+    heading: 'Some Random Shit',
+    date: 'Again some Random shit',
+    content: `Again Some more Random DataAgain Some more Random DataAgain Some more Random DataAgain Some more Random DataAgain Some more Random DataAgain Some more Random DataAgain Some more Random DataAgain Some more Random DataAgain Some more Random DataAgain Some more Random DataAgain Some more Random DataAgain Some more Random DataAgain Some more Random Data`
+ }
 };
-
 function createTemp(data) {
 var title = data.title;
 var date = data.date;
@@ -59,16 +71,9 @@ app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
 
-app.get('/number1', function(req, res) {
-    res.send(createTemp(number1));
-});
-
-app.get('/number2', function(req, res) {
-    res.sendFile(path.join(__dirname, 'ui', 'number2.html'));
-});
-
-app.get('/number3', function(req, res) {
-    res.sendFile(path.join(__dirname, 'ui', 'number3.html'));
+app.get('/:Name', function(req, res) {
+    var Name = req.params.Name;
+    res.send(createTemp(articles[Name]));
 });
 
 app.get('/ui/style.css', function (req, res) {
