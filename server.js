@@ -56,11 +56,11 @@ return htmlTemp;
 }
 
 app.get('/', function (req, res) {
-  res.send(createTemp(number1));
+  res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
 
 app.get('/number1', function(req, res) {
-    res.sendFile(path.join(__dirname, 'ui', 'number1.html'));
+    res.send(createTemp(number1));
 });
 
 app.get('/number2', function(req, res) {
