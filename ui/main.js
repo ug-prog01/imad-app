@@ -16,12 +16,24 @@ function moveRight () {
 img.onclick = function() {
     var delay = setInterval(moveRight, 20)
 }*/
-var counter = 0;
 var button = document.getElementById("clickme");
 button.onclick = function() {
     
+    var request = new XMLHttpRequest();
     
-    counter = counter + 1;
-    var span = document.getElementById("count");
-    span.innerHTML = counter.toString();
-}
+    request.onreadystatechange = function() {
+        if (request.readyState === XMLHttpRequest.DONE)
+        {
+            if(request.status === 200) {
+                var counter = request.responseText;
+                var span = document.getElementById("count");
+                span.innerHTML = counter.toString();
+            }
+        }
+    };
+    
+    request.open('GET', 'http://ug19991.imad.hasura-app.io/', true);
+    request.send(null);
+    
+    
+};
