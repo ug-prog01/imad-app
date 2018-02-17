@@ -8,7 +8,12 @@ console.log('Loaded!');
 
 var img = document.getElementById('dino');
 
+function moveRight () {
+    marginLeft = marginLeft + 5;
+    img.style.marginLeft = marginLeft + 'px';
+}
+
 img.onclick = function() {
-    img.style.marginLeft = '10px';
+    var delay = setInterval(moveRight, 20)
 }
 
