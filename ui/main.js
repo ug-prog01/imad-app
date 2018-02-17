@@ -6,4 +6,9 @@ console.log('Loaded!');
 //    document.getElementById('maintext').innerHTML = 'element.innerHTML';
 //})
 
+var img = document.getElementById('dino');
+
+img.onclick = function() {
+    img.style.marginLeft = '10px';
+}
 
