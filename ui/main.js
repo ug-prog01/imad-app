@@ -16,7 +16,7 @@ function moveRight () {
 img.onclick = function() {
     var delay = setInterval(moveRight, 20)
 }*/
-
+var counter = 0;
 var button = document.getElementById("clickme");
 button.onclick = function() {
     
