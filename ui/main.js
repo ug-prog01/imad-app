@@ -38,10 +38,10 @@ button.onclick = function() {
     
 };
 
-var nameIn = document.getElementById('box');
-var name = nameIn.value;
 var submit = document.getElementById('enter');
 submit.onclick = function() {
+    var nameIn = document.getElementById('box');
+    var name = nameIn.value;
     var request = new XMLHttpRequest();
     
     request.onreadystatechange = function() {
