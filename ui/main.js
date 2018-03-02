@@ -20,8 +20,8 @@ var marginTop = 0;
 function moveRight () {
     marginLeft = marginLeft + 5;
     marginTop = marginTop + 5;
-    c.style.Left = marginLeft + 'px';
-    c.style.Top = marginTop + 'px';
+    c.style.left = marginLeft + 'px';
+    c.style.top = marginTop + 'px';
 }
 
 c.onclick = function() {
