@@ -31,7 +31,7 @@ c.onclick = function() {
 document.getElementById("myBtn").addEventListener("click", displayDate);
 
 function displayDate() {
-    document.getElementById("demo").innerHTML = document.getElementById("enter");
+    document.getElementById("demo").innerHTML = document.getElementById("enter").innerHTML;
 }
 
 var button = document.getElementById("clickme");
