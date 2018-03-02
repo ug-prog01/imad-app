@@ -6,16 +6,18 @@ console.log('Loaded!');
 //    document.getElementById('maintext').innerHTML = 'element.innerHTML';
 //})
 
-/*var img = document.getElementById('dino');
+var img = document.getElementById('dino');
 var marginLeft = 0;
+var marginTop = 0;
 function moveRight () {
     marginLeft = marginLeft + 5;
+    marginTop = marginTop + 5;
     img.style.marginLeft = marginLeft + 'px';
 }
 
 img.onclick = function() {
     var delay = setInterval(moveRight, 20)
-}*/
+}
 var button = document.getElementById("clickme");
 button.onclick = function() {
     
