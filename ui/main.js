@@ -6,19 +6,28 @@ console.log('Loaded!');
 //    document.getElementById('maintext').innerHTML = 'element.innerHTML';
 //})
 
-var img = document.getElementById('dino');
+/*var img = document.getElementById('dino');
+
+*/
+
+var c = document.getElementById("myCanvas");
+var ctx = c.getContext("2d");
+ctx.beginPath();
+ctx.arc(95,50,40,0,2*Math.PI);
+ctx.stroke();
 var marginLeft = 0;
 var marginTop = 0;
 function moveRight () {
     marginLeft = marginLeft + 5;
     marginTop = marginTop + 5;
-    img.style.marginLeft = marginLeft + 'px';
-    img.style.marginTop = marginTop + 'px';
+    c.style.marginLeft = marginLeft + 'px';
+    c.style.marginTop = marginTop + 'px';
 }
 
-img.onclick = function() {
+c.onclick = function() {
     var delay = setInterval(moveRight, 20)
 }
+
 var button = document.getElementById("clickme");
 button.onclick = function() {
     
