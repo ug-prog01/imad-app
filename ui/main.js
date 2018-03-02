@@ -20,8 +20,8 @@ var marginTop = 0;
 function moveRight () {
     marginLeft = marginLeft + 5;
     marginTop = marginTop + 5;
-    c.style.paddingLeft = marginLeft + 'px';
-    c.style.paddingTop = marginTop + 'px';
+    c.style.Left = marginLeft + 'px';
+    c.style.Top = marginTop + 'px';
 }
 
 c.onclick = function() {
