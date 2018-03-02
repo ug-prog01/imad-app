@@ -20,12 +20,18 @@ var marginTop = 0;
 function moveRight () {
     marginLeft = marginLeft + 5;
     marginTop = marginTop + 5;
-    c.style.left = marginLeft + 'px';
-    c.style.top = marginTop + 'px';
+    c.style.paddingLeft = marginLeft + 'px';
+    c.style.paddingTop = marginTop + 'px';
 }
 
 c.onclick = function() {
     var delay = setInterval(moveRight, 20)
+}
+
+document.getElementById("myBtn").addEventListener("click", displayDate);
+
+function displayDate() {
+    document.getElementById("demo").innerHTML = Date();
 }
 
 var button = document.getElementById("clickme");
