@@ -8,19 +8,19 @@ app.use(morgan('combined'));
 var articles = {
  number1:  {
     title: 'Number 1 Guys!',
-    heading: 'Some Random Shit',
+    heading: 'Some Random Stuff',
     date: 'Again some Random shit',
     content: `Again Some more Random DataAgain Some more Random DataAgain Some more Random DataAgain Some more Random DataAgain Some more Random DataAgain Some more Random DataAgain Some more Random DataAgain Some more Random DataAgain Some more Random DataAgain Some more Random DataAgain Some more Random DataAgain Some more Random DataAgain Some more Random Data`
 },
  number2: {
     title: 'Number 2 Guys!',
-    heading: 'Some Random Shit',
+    heading: 'Some Random Stuff',
     date: 'Again some Random shit',
     content: `Again Some more Random DataAgain Some more Random DataAgain Some more Random DataAgain Some more Random DataAgain Some more Random DataAgain Some more Random DataAgain Some more Random DataAgain Some more Random DataAgain Some more Random DataAgain Some more Random DataAgain Some more Random DataAgain Some more Random DataAgain Some more Random Data`
  },
  number3: {
     title: 'Number 3 Guys!',
-    heading: 'Some Random Shit',
+    heading: 'Some Random Stuff',
     date: 'Again some Random shit',
     content: `Again Some more Random DataAgain Some more Random DataAgain Some more Random DataAgain Some more Random DataAgain Some more Random DataAgain Some more Random DataAgain Some more Random DataAgain Some more Random DataAgain Some more Random DataAgain Some more Random DataAgain Some more Random DataAgain Some more Random DataAgain Some more Random Data`
  }
